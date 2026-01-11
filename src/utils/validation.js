@@ -8,7 +8,7 @@ const validateSignup = (req, res) => {
         });
     }
 
-    if (typeof age !== "number" || age <= 0) {
+    if (age <= 0) {
         return res.status(400).json({
             success: false,
             message: "Age must be a valid number",
